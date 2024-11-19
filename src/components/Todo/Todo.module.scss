@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    padding: rem-calc(20);
+}
+
+.actions{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.trash, .update{
+    width: rem-calc(17);
+    height: auto;
+}

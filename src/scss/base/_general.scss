@@ -12,3 +12,104 @@ body {
   font-size: rem-calc(13);
   line-height: rem-calc(17);
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: rem-calc(150);
+  margin-right: rem-calc(150);
+  height: 100vh;
+  
+  // Media query for small screens (mobile)
+  @media (max-width: 768px) {
+    margin-left: rem-calc(20);
+    margin-right: rem-calc(20);
+  }
+
+  // Media query for very small screens (portrait mobile)
+  @media (max-width: 480px) {
+    margin-left: rem-calc(10);
+    margin-right: rem-calc(10);
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+
+  // Make title font size responsive
+  h1 {
+    font-size: calc(1.5rem + 1vw);
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: calc(1rem + 0.5vw);
+  }
+}
+
+.todo-container {
+  background-color: #fbfbfb;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 800px;  // Limit max width for large screens
+
+  // Make padding responsive
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+.add-task-container {
+  margin-bottom: 1rem;
+}
+
+.new-task-input {
+  border-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+  outline: none;
+  padding-left: 1rem;
+  width: calc(100% - 8rem);  // Full width for smaller screens
+}
+
+.submit-button {
+  background-color: rgb(164, 164, 255);
+  height: 3rem;
+  width: 6rem;
+  border-radius: 1rem;
+  
+  // Make button width responsive
+  @media (max-width: 768px) {
+    width: 5rem;
+  }
+  @media (max-width: 480px) {
+    width: 4rem;
+  }
+}
+
+.list-task-container {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(7);
+  overflow-y: auto;
+  max-height: 300px;
+
+  // Make the list more responsive on small screens
+  @media (max-width: 768px) {
+    max-height: 250px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 200px;
+  }
+}
